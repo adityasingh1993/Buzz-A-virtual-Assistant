@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE5F472E-5B0B-4BCF-AA5B-8197F189CB93}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Banking</RootNamespace>
+    <AssemblyName>Banking</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jint, Version=2.7.1.0, Culture=neutral, PublicKeyToken=2e92ba9c8d81157f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jint.2.8\lib\portable-net40+sl50+win+WindowsPhoneApp81+wp80\Jint.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Syn.Bot, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syn.Bot.1.2.4\lib\portable-net45+win8+wp8\Syn.Bot.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syn.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syn.Log.1.0.0\lib\portable-net45+win8+wp8\Syn.Log.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syn.VA, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syn.VA.1.0.1\lib\portable-net45+win8+wp8\Syn.VA.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityClass\AccountSummary.cs" />
+    <Compile Include="ActivityClass\Benificiary.cs" />
+    <Compile Include="ActivityClass\CardDetails.cs" />
+    <Compile Include="ActivityClass\CreditAndDebitCard.cs" />
+    <Compile Include="ActivityClass\FundTransfer.cs" />
+    <Compile Include="ActivityClass\LoginActivity.cs" />
+    <Compile Include="ActivityClass\MainLayout.cs" />
+    <Compile Include="ActivityClass\TransactionLayoutActivity.cs" />
+    <Compile Include="ChatBot\ChatBotClass.cs" />
+    <Compile Include="ChatBot\ChatBotFun.cs" />
+    <Compile Include="CollectionClass\ClassForReading.cs" />
+    <Compile Include="FindingActivity\FindActivity.cs" />
+    <Compile Include="IntentClass\ClassIntent.cs" />
+    <Compile Include="LoopClass\LoopTTSClass.cs" />
+    <Compile Include="LoopClass\LoopUtteranceProgress.cs" />
+    <Compile Include="LoopClass\LoopVoiceRecognize.cs" />
+    <Compile Include="PropertyClass\AddBenificiaryClass.cs" />
+    <Compile Include="PropertyClass\CallClass.cs" />
+    <Compile Include="PropertyClass\ChatResultClass.cs" />
+    <Compile Include="PropertyClass\ClassForReading.cs" />
+    <Compile Include="PropertyClass\ItteratorClass.cs" />
+    <Compile Include="PropertyClass\KnowledgeClass.cs" />
+    <Compile Include="PropertyClass\LoginPropClass.cs" />
+    <Compile Include="PropertyClass\SetActivity.cs" />
+    <Compile Include="PropertyClass\SetBAnkingDetails.cs" />
+    <Compile Include="PropertyClass\SetBundle.cs" />
+    <Compile Include="PropertyClass\TextToSpeechProperty.cs" />
+    <Compile Include="PropertyClass\VoiceRecognizationOutput.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TTS\TTSClass.cs" />
+    <Compile Include="TTS\UtterenceProgress.cs" />
+    <Compile Include="VoiceActivity\VoiceActivityForAccountSummary.cs" />
+    <Compile Include="VoiceActivity\VoiceActivityForBenificiary.cs" />
+    <Compile Include="VoiceActivity\VoiceActivityForMain.cs" />
+    <Compile Include="VoiceActivity\VoiceActivityForTransaction.cs" />
+    <Compile Include="VoiceRecognization\VoiceRecognizeClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Buzz.simlpk" />
+    <None Include="GettingStarted.Xamarin" />
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\AccountSummary.axml" />
+    <AndroidResource Include="Resources\layout\Benificiary.axml" />
+    <AndroidResource Include="Resources\layout\CardDetails.axml" />
+    <AndroidResource Include="Resources\layout\FundTransfer.axml" />
+    <AndroidResource Include="Resources\layout\LoginLayout.axml" />
+    <AndroidResource Include="Resources\layout\MainLayout.axml" />
+    <AndroidResource Include="Resources\layout\TransactionLayout1.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+		<Target Name="BeforeBuild">
+		</Target>
+		<Target Name="AfterBuild">
+		</Target>
+ -->
+</Project>
